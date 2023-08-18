@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/word-processor-demo/static/css/main.2730857f.css",
-    "main.js": "/word-processor-demo/static/js/main.f84beb01.js",
+    "main.js": "/word-processor-demo/static/js/main.05995a6a.js",
     "static/js/787.d3f85489.chunk.js": "/word-processor-demo/static/js/787.d3f85489.chunk.js",
     "static/media/Allura-Regular.ttf": "/word-processor-demo/static/media/Allura-Regular.9429cde4d80d03c85860.ttf",
     "static/media/GreatVibes-Regular.ttf": "/word-processor-demo/static/media/GreatVibes-Regular.6d246c3b51d7eb58b13a.ttf",
@@ -9,11 +9,11 @@
     "static/media/Sacramento-Regular.ttf": "/word-processor-demo/static/media/Sacramento-Regular.5bd7d5208f7a9c18fe22.ttf",
     "index.html": "/word-processor-demo/index.html",
     "main.2730857f.css.map": "/word-processor-demo/static/css/main.2730857f.css.map",
-    "main.f84beb01.js.map": "/word-processor-demo/static/js/main.f84beb01.js.map",
+    "main.05995a6a.js.map": "/word-processor-demo/static/js/main.05995a6a.js.map",
     "787.d3f85489.chunk.js.map": "/word-processor-demo/static/js/787.d3f85489.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2730857f.css",
-    "static/js/main.f84beb01.js"
+    "static/js/main.05995a6a.js"
   ]
 }
