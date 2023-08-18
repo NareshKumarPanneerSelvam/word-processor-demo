@@ -1,38 +1,267 @@
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-react-documenteditor/styles/material.css";
+
+@font-face {
+  font-family: 'Sacramento';
+  src: url('./fonts/Sacramento/Sacramento-Regular.ttf');
+}
+@font-face {
+  font-family: 'Allura';
+  src: url('./fonts/Allura/Allura-Regular.ttf');
+}
+@font-face {
+  font-family: 'Dancing script';
+  src: url('./fonts/Dancing_Script/static/DancingScript-Regular.ttf');
+}
+@font-face {
+  font-family: 'Great vibes';
+  src: url('./fonts/Great_Vibes/GreatVibes-Regular.ttf');
+}
+
+.form-controls{
+  box-shadow: none !important;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.doc-editor{
+  height: 100% !important;
+  width: 100%;
+}
+#doc-container{
+  height: 100% !important;
+}
+#doc-container_editor_viewerContainer{
+  height : 100% !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Drag and drop styles*/
+#drag-and-drop-container{
+    display:flex;
+    height: 100vh;
+}
+#drag-and-drop-container .drag-contents{
+  width: 300px;
+  background: #fafafa;
+  border: 1px solid #f2f2f2;
+  padding: 0 10px;
+}
+#drag-and-drop-container .drag-content{
+  cursor: move;
+  padding : 10px;
+  border : 1px solid;
+}
+#drag-and-drop-container .document-editor{
+  width: calc(100% - 300px);
+  display: flex;
+}
+  
+#modal.modal{
+  background-color: rgba(0,0,0,0.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#modal.modal .modal-dialog{
+  max-width: max-content;
+  min-width: 600px;
+}
+
+
+.form-control{
+  box-shadow: none !important;
+}
+
+.pointer-event-none{
+  pointer-events: none !important;
+}
+
+.signature-canvas{
+  border: 1px solid #ccc
+}
+
+.btn-group > .btn {
+  background-color: #fff;
+  color:black;
+}
+
+.btn-group{
+  width: 100%;
+}
+
+#button-type-container .name-input-container{
+    padding: 10px;
+    background: #ebebeb;
+}
+#button-type-container .name-input-container label{
+    padding-right: 20px;
+    font-weight: 600;
+}
+#button-type-container .name-input-container .name-input{
+    width: calc(100% - 100px);
+}
+
+#signature-group-container{
+  padding : 10px;
+}
+#signature-group-container .signature-type{
+    background: #FFFFFF;
+    border: 1px solid #E2E6EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 84px;
+    margin : 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    cursor: pointer;
+}
+#signature-group-container .signature-type:hover ,  #signature-group-container .signature-type.active{
+    background: #e0f5e5 !important;
+    border: 1px solid #55ab68 !important;
+}
+#signature-group-container .signature-type.type-1{
+   font-family: 'Sacramento';
+}
+#signature-group-container .signature-type.type-2{
+  font-family: 'Allura';
+}
+#signature-group-container .signature-type.type-3{
+  font-family: 'Great vibes';
+}
+#signature-group-container .signature-type.type-4{
+  font-family: 'Dancing script';
+}
+
+#sign-clear{
+    color : #0450cc;
+    text-align: right;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#button-draw-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-upload-container .e-upload-actions{
+  display: none !important;
+}
+#upload-remove{
+    color : rgb(250,0,0);
+    text-align: right;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#drop-files-here{
+  font-size: 14px;
+    color: rgb(179, 187, 197);
+    text-align: center;
+}
+#browse-btn{
+    background-color: #fff;
+    border-color: var(--bs-signature-btn-color);
+    color: var(--bs-signature-btn-color);
+}
+
+#variable-modal{
+  padding: 0 10px;
+  border: 1px solid #f2f2;
+  height: 100%;
+}
+
+#variable-modal .modal-dialog .modal-content{
+  border: none;
+}
+
+#variable-modal .field-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  cursor: move;
+}
+
+#variable-modal .field-wrapper .form-control{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-image: initial;
+  appearance: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgb(173, 173, 173);
+  background: rgba(118, 118, 118, 0.08);
+  padding: 0px 8px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: border-color 0.3s ease 0s;
+  resize: none;
+  min-height: 32px;
+}
+
+#variable-modal .add-btn{
+  cursor: pointer;
+  color: #47b972;
+  border-radius: 2px;
+  height: 18px;
+  width: 20px;
+}
+
+#variable-modal .search-box{
+  flex: 1;
+  margin: 0 10px 0 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.common-toolbar{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+#button-upload-container .e-file-select-wrap{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.custom-tab{
+  padding-bottom: 10px;
+}
+
+.custom-tab .tab-items{
+  display: flex;
+  align-items: center;
+}
+
+.custom-tab .tab-items .tab-item{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  padding: 0 10px;
+  flex: 1 1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-tab .tab-items .tab-item.active{
+  border-bottom: 4px solid rgb(41, 129, 248);
+  margin-top: 4px;
 }
